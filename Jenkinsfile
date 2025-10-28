@@ -1,12 +1,12 @@
 pipeline {
     agent any
     environment {
-        DOCKER_IMAGE = 'manjukolkar007/test-dev:latest'
+        DOCKER_IMAGE = 'prashanthkumarbs/scroll-web:latest'
     }
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/manjukolkar/scroll-web.git'
+                git 'https://github.com/prashanth-kumarbs/my-scroll-web.git'
             }
         }
         stage('Build Docker Image') {
@@ -39,3 +39,4 @@ pipeline {
         }
     }
 }
+
